@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>婚礼筹备待办清单 - 2025年3月16日</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 20px auto; padding: 20px; }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; }
+        h2 { color: #34495e; margin-top: 30px; }
+        .remark { color: #7f8c8d; font-size: 0.9em; margin-left: 15px; }
+        ul { list-style-type: none; padding-left: 20px; }
+        li { margin: 8px 0; }
+        button { background: #e74c3c; color: white; border: none; padding: 10px 20px; cursor: pointer; margin-top: 20px; }
+        button:hover { background: #c0392b; }
+    </style>
+</head>
+<body>
+    <h1>婚礼筹备待办清单 ✅</h1>
+    <p><strong>婚礼日期：2025年3月16日</strong></p>
+
+    <h2>一、2月7日 - 2月9日</h2>
+    <ul>
+        <li><input type="checkbox" id="task1"> 找化妆师</li>
+        <li><input type="checkbox" id="task2"> 2月9日试婚纱
+            <div class="remark">需要确定主纱/秀禾/伴娘服款式，每套衣服拍全身照</div>
+        </li>
+    </ul>
+
+    <h2>二、2月10日 - 2月14日（工作日）</h2>
+    <ul>
+        <li><input type="checkbox" id="task3"> 看大巴攻略（只做攻略不定）</li>
+        <li><input type="checkbox" id="task4"> 买四件套/房间装饰/对联
+            <div class="remark">房间装饰需网上做攻略，对联买麻城的</div>
+        </li>
+        <li><input type="checkbox" id="task5"> 和婚庆对接
+            <div class="remark">确认捧花、摄影、照片、司仪，是否有彩排仪式流程</div>
+        </li>
+    </ul>
+
+    <h2>三、2月15日 - 2月16日（周末）</h2>
+    <ul>
+        <li><input type="checkbox" id="task6"> 回枝江家买床/衣柜/床头柜</li>
+        <li><input type="checkbox" id="task7"> 购置新衣物：
+            <div class="remark">男女新内衣、睡衣、拖鞋、袜子，女式内衣，男方皮鞋，女方婚鞋</div>
+        </li>
+    </ul>
+
+    <h2>四、2月17日 - 2月21日（工作日）</h2>
+    <ul>
+        <li><input type="checkbox" id="task8"> 发送婚贝电子邀请函</li>
+        <li><input type="checkbox" id="task9"> 购买喜糖/红包（麻城）
+            <div class="remark">需确定女方人数后采购</div>
+        </li>
+        <li><input type="checkbox" id="task10"> 做三金攻略</li>
+    </ul>
+
+    <h2>五、2月22日 - 2月23日（周末）</h2>
+    <ul>
+        <li><input type="checkbox" id="task11"> 购买三金</li>
+        <li><input type="checkbox" id="task12"> 确定大巴
+            <div class="remark">需确定所有人数后定</div>
+        </li>
+        <li><input type="checkbox" id="task13"> 购买车饰（准备2套）
+            <div class="remark">考虑高速安全问题需更换</div>
+        </li>
+        <li><input type="checkbox" id="task14"> 预订住宿酒店
+            <div class="remark">确认是否有儿童，酒店是否提供早餐</div>
+        </li>
+        <li><input type="checkbox" id="task15"> 确定酒店桌数
+            <div class="remark">确定所有人数后定，烟大姐可帮忙，酒可从京东购买</div>
+        </li>
+    </ul>
+
+    <h2>六、2月24日 - 2月28日（工作日）</h2>
+    <ul>
+        <li><input type="checkbox" id="task16"> 买敬酒服</li>
+        <li><input type="checkbox" id="task17"> 买双方父母衣服、裤子、鞋子</li>
+        <li><input type="checkbox" id="task18"> 伴郎服准备（可暂缓）</li>
+    </ul>
+
+    <h2>七、3月1日 - 3月2日</h2>
+    <ul>
+        <li><input type="checkbox" id="task19"> 购买对戒</li>
+        <li><input type="checkbox" id="task20"> 购买胸花：
+            <div class="remark">新人、双方父母、伴郎伴娘</div>
+        </li>
+    </ul>
+
+    <h2>八、3月3日 - 3月12日</h2>
+    <ul>
+        <li><input type="checkbox" id="task21"> 查缺补漏</li>
+        <li><input type="checkbox" id="task22"> 提前寄回婚纱照</li>
+        <li><input type="checkbox" id="task23"> 购买回门用品
+            <div class="remark">需咨询家长</div>
+        </li>
+    </ul>
+
+    <button onclick="clearAll()">清除所有勾选</button>
+
+    <script>
+        // 保存勾选状态到本地存储
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                localStorage.setItem(checkbox.id, checkbox.checked);
+            });
+            // 加载时恢复勾选状态
+            checkbox.checked = localStorage.getItem(checkbox.id) === 'true';
+        });
+
+        // 清除所有勾选状态
+        function clearAll() {
+            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                checkbox.checked = false;
+                localStorage.removeItem(checkbox.id);
+            });
+            alert('所有勾选已清除！');
+        }
+    </script>
+</body>
+</html>
