@@ -3,116 +3,196 @@
 <head>
     <title>婚礼筹备待办清单 - 2025年3月16日</title>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 20px auto; padding: 20px; }
-        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; }
-        h2 { color: #34495e; margin-top: 30px; }
-        .remark { color: #7f8c8d; font-size: 0.9em; margin-left: 15px; }
-        ul { list-style-type: none; padding-left: 20px; }
-        li { margin: 8px 0; }
-        button { background: #e74c3c; color: white; border: none; padding: 10px 20px; cursor: pointer; margin-top: 20px; }
-        button:hover { background: #c0392b; }
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            max-width: 900px; 
+            margin: 30px auto; 
+            padding: 30px;
+            background: #fff5f7;
+        }
+        h1 { 
+            color: #c44569; 
+            border-bottom: 3px solid #e66767;
+            padding-bottom: 15px;
+            font-size: 2.2em;
+        }
+        h2 { 
+            color: #786fa6; 
+            margin-top: 35px;
+            font-size: 1.4em;
+            background: #f8f8ff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .time-period {
+            color: #778beb;
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+        .remark {
+            color: #e77f67; 
+            font-size: 0.88em;
+            margin: 5px 0 15px 25px;
+            padding-left: 10px;
+            border-left: 3px solid #f8a5c2;
+        }
+        ul { 
+            list-style-type: none; 
+            padding-left: 20px; 
+            margin: 15px 0;
+        }
+        li { 
+            margin: 12px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        button {
+            background: #e66767;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            margin-top: 25px;
+            border-radius: 25px;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+        button:hover { 
+            background: #c44569; 
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(230,103,103,0.3);
+        }
+        input[type="checkbox"] {
+            transform: scale(1.3);
+            margin-right: 12px;
+            accent-color: #e66767;
+        }
     </style>
 </head>
 <body>
-    <h1>婚礼筹备待办清单 ✅</h1>
-    <p><strong>婚礼日期：2025年3月16日</strong></p>
+    <h1>婚礼筹备进度管理 🎉</h1>
+    <p><strong>婚礼倒计时：<span id="countdown"></span></strong></p>
 
-    <h2>一、2月7日 - 2月9日</h2>
+    <!-- 各阶段任务区块 -->
+    <h2>一、婚前准备阶段 <span class="time-period">(2月7日 - 2月9日)</span></h2>
     <ul>
-        <li><input type="checkbox" id="task1"> 找化妆师</li>
-        <li><input type="checkbox" id="task2"> 2月9日试婚纱
-            <div class="remark">需要确定主纱/秀禾/伴娘服款式，每套衣服拍全身照</div>
+        <li><input type="checkbox" id="task1"> 预约化妆师</li>
+        <li><input type="checkbox" id="task2"> 婚纱试穿（2月9日）
+            <div class="remark">需确定：主纱/秀禾服/伴娘服款式，每套拍摄全身照留存</div>
         </li>
     </ul>
 
-    <h2>二、2月10日 - 2月14日（工作日）</h2>
+    <h2>二、工作日筹备 <span class="time-period">(2月10日 - 2月14日)</span></h2>
     <ul>
-        <li><input type="checkbox" id="task3"> 看大巴攻略（只做攻略不定）</li>
-        <li><input type="checkbox" id="task4"> 买四件套/房间装饰/对联
-            <div class="remark">房间装饰需网上做攻略，对联买麻城的</div>
+        <li><input type="checkbox" id="task3"> 交通安排调研（暂不预定）</li>
+        <li><input type="checkbox" id="task4"> 采购婚房用品
+            <div class="remark">包含：四件套/装饰品/麻城特色对联（需提前做好网购攻略）</div>
         </li>
-        <li><input type="checkbox" id="task5"> 和婚庆对接
-            <div class="remark">确认捧花、摄影、照片、司仪，是否有彩排仪式流程</div>
+        <li><input type="checkbox" id="task5"> 婚庆公司对接
+            <div class="remark">确认：捧花样式、摄影团队、流程彩排、司仪沟通（可约2月22日详谈）</div>
         </li>
     </ul>
 
-    <h2>三、2月15日 - 2月16日（周末）</h2>
+    <h2>三、周末大采购 <span class="time-period">(2月15日 - 2月16日)</span></h2>
     <ul>
-        <li><input type="checkbox" id="task6"> 回枝江家买床/衣柜/床头柜</li>
-        <li><input type="checkbox" id="task7"> 购置新衣物：
-            <div class="remark">男女新内衣、睡衣、拖鞋、袜子，女式内衣，男方皮鞋，女方婚鞋</div>
+        <li><input type="checkbox" id="task6"> 枝江家具采购（床/衣柜/床头柜）</li>
+        <li><input type="checkbox" id="task7"> 新人服饰准备
+            <div class="remark">包含：全新内衣/睡衣/拖鞋/袜子，女方婚鞋，男方皮鞋</div>
         </li>
     </ul>
 
-    <h2>四、2月17日 - 2月21日（工作日）</h2>
+    <h2>四、邀请与礼品准备 <span class="time-period">(2月17日 - 2月21日)</span></h2>
     <ul>
-        <li><input type="checkbox" id="task8"> 发送婚贝电子邀请函</li>
-        <li><input type="checkbox" id="task9"> 购买喜糖/红包（麻城）
-            <div class="remark">需确定女方人数后采购</div>
+        <li><input type="checkbox" id="task8"> 电子请柬发送（婚贝平台）</li>
+        <li><input type="checkbox" id="task9"> 喜糖及红包采购
+            <div class="remark">需确认：女方宾客人数、麻城特色红包样式</div>
         </li>
-        <li><input type="checkbox" id="task10"> 做三金攻略</li>
+        <li><input type="checkbox" id="task10"> 三金选购攻略制定</li>
     </ul>
 
-    <h2>五、2月22日 - 2月23日（周末）</h2>
+    <h2>五、重要事项落实 <span class="time-period">(2月22日 - 2月23日)</span></h2>
     <ul>
-        <li><input type="checkbox" id="task11"> 购买三金</li>
-        <li><input type="checkbox" id="task12"> 确定大巴
-            <div class="remark">需确定所有人数后定</div>
+        <li><input type="checkbox" id="task11"> 新娘试妆</li>
+        <li><input type="checkbox" id="task12"> 探访亲友（标山外婆家）</li>
+        <li><input type="checkbox" id="task13"> 三金正式采购</li>
+        <li><input type="checkbox" id="task14"> 婚车装饰准备
+            <div class="remark">需准备2套装饰（考虑高速行驶安全）</div>
         </li>
-        <li><input type="checkbox" id="task13"> 购买车饰（准备2套）
-            <div class="remark">考虑高速安全问题需更换</div>
-        </li>
-        <li><input type="checkbox" id="task14"> 预订住宿酒店
-            <div class="remark">确认是否有儿童，酒店是否提供早餐</div>
-        </li>
-        <li><input type="checkbox" id="task15"> 确定酒店桌数
-            <div class="remark">确定所有人数后定，烟大姐可帮忙，酒可从京东购买</div>
+        <li><input type="checkbox" id="task15"> 酒店最终确认
+            <div class="remark">确认：桌数/烟酒供应（京东备酒）、儿童接待、早餐服务</div>
         </li>
     </ul>
 
-    <h2>六、2月24日 - 2月28日（工作日）</h2>
+    <h2>六、服饰最终确认 <span class="time-period">(2月24日 - 2月28日)</span></h2>
     <ul>
-        <li><input type="checkbox" id="task16"> 买敬酒服</li>
-        <li><input type="checkbox" id="task17"> 买双方父母衣服、裤子、鞋子</li>
-        <li><input type="checkbox" id="task18"> 伴郎服准备（可暂缓）</li>
+        <li><input type="checkbox" id="task16"> 敬酒服选购</li>
+        <li><input type="checkbox" id="task17"> 父母服装准备</li>
+        <li><input type="checkbox" id="task18"> 伴郎服确认（可延后）</li>
     </ul>
 
-    <h2>七、3月1日 - 3月2日</h2>
+    <h2>七、细节完善阶段 <span class="time-period">(3月1日 - 3月2日)</span></h2>
     <ul>
-        <li><input type="checkbox" id="task19"> 购买对戒</li>
-        <li><input type="checkbox" id="task20"> 购买胸花：
-            <div class="remark">新人、双方父母、伴郎伴娘</div>
+        <li><input type="checkbox" id="task19"> 婚戒选购</li>
+        <li><input type="checkbox" id="task20"> 胸花准备
+            <div class="remark">包含：新人、双方父母、伴郎伴娘专用胸花</div>
         </li>
     </ul>
 
-    <h2>八、3月3日 - 3月12日</h2>
+    <h2>八、最终确认阶段 <span class="time-period">(3月3日 - 3月12日)</span></h2>
     <ul>
-        <li><input type="checkbox" id="task21"> 查缺补漏</li>
-        <li><input type="checkbox" id="task22"> 提前寄回婚纱照</li>
-        <li><input type="checkbox" id="task23"> 购买回门用品
-            <div class="remark">需咨询家长</div>
+        <li><input type="checkbox" id="task21"> 全面查漏补缺</li>
+        <li><input type="checkbox" id="task22"> 婚纱照寄送</li>
+        <li><input type="checkbox" id="task23"> 回门用品采购
+            <div class="remark">需与家长确认具体需求</div>
         </li>
     </ul>
 
-    <button onclick="clearAll()">清除所有勾选</button>
+    <button onclick="clearAll()">重置所有进度</button>
 
     <script>
-        // 保存勾选状态到本地存储
+        // 自动倒计时计算
+        function updateCountdown() {
+            const weddingDate = new Date('2025-03-16');
+            const today = new Date();
+            const diffTime = weddingDate - today;
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+            document.getElementById('countdown').textContent = `${diffDays} 天`;
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 86400000);
+
+        // 进度保存系统
         document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            // 状态保存
             checkbox.addEventListener('change', function() {
-                localStorage.setItem(checkbox.id, checkbox.checked);
+                localStorage.setItem(`weddingTask_${checkbox.id}`, this.checked);
+                updateProgress();
             });
-            // 加载时恢复勾选状态
-            checkbox.checked = localStorage.getItem(checkbox.id) === 'true';
+            
+            // 状态恢复
+            const savedState = localStorage.getItem(`weddingTask_${checkbox.id}`);
+            checkbox.checked = savedState === 'true';
         });
 
-        // 清除所有勾选状态
+        // 进度可视化
+        function updateProgress() {
+            const total = document.querySelectorAll('input[type="checkbox"]').length;
+            const checked = document.querySelectorAll('input[type="checkbox"]:checked').length;
+            document.title = `已完成 ${Math.round((checked/total)*100)}% | 婚礼筹备`;
+        }
+        updateProgress();
+
+        // 重置功能
         function clearAll() {
-            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-                checkbox.checked = false;
-                localStorage.removeItem(checkbox.id);
-            });
-            alert('所有勾选已清除！');
+            if(confirm('确定要重置所有进度吗？')) {
+                document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                    checkbox.checked = false;
+                    localStorage.removeItem(`weddingTask_${checkbox.id}`);
+                });
+                updateProgress();
+            }
         }
     </script>
 </body>
